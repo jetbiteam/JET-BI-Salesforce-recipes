@@ -10,14 +10,14 @@ This component is built on Lightning Web Component JavaScript framework (LWC fur
 
 ## Launch
 You can embed the component into your business flow and launch it from another:
-* AURA component
-* LWC
-* Screen Flow
+* AURA component,
+* LWC,
+* Screen Flow.
 
 The component includes 3 inputs:
-* records - SObject records to arrange
-* displayField - API Name of the field the value of which is used as the table-item display name
-* sortingField - API Name of the field where the sorting value is stored, must be of type Integer    
+* records - SObject records to arrange,
+* displayField - API Name of the field the value of which is used as the table-item display name,
+* sortingField - API Name of the field where the sorting value is stored, must be of type Integer.
 	
 ## Setup
 To run this project on a scratch org:
