@@ -1,5 +1,5 @@
 # Drag-&-Drop Sorting Table
-Contains a component that let's you arrange table items using Drag-&-Drop (dnd further) API. Convenience is associated with dnd feature that allows to move items up and down in the table elegantly setting their relative position and sort order, instead of writing it manually on each item's record.
+Contains a component that let's you arrange table items using Drag-&-Drop (dnd further) API. Convenience is associated with dnd feature that allows to move items up and down in the table elegantly setting their relative position and sort order, instead of writing it manually on each item's record. Watch demo video https://youtu.be/j35QAxePjBw?si=C0pZLJvuUdeBJJAS
 
 ## Technologies
 This component is built on Lightning Web Component JavaScript framework (LWC further).
