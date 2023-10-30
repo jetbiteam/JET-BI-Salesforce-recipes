@@ -5,7 +5,6 @@ Contains a component that let's you arrange table items using Drag-&-Drop (dnd f
 This component is built on Lightning Web Component JavaScript framework (LWC further).
 
 ## Use cases
-You can invent your own, but the general examples are:
 * Arranging Accounts by priority,
 * Arranging Quote Line Items for the Quote, etc...
 
