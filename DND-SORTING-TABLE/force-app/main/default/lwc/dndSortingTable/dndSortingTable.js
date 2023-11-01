@@ -1,6 +1,7 @@
 import { LightningElement, api, track } from "lwc";
 import save from "@salesforce/apex/DNDSortingController.saveSorting";
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
+import { FlowNavigationFinishEvent, FlowNavigationNextEvent } from 'lightning/flowSupport';
 
 const CANCEL_LITERAL = "Cancel"
 const SAVE_LITERAL = "Save"
@@ -12,6 +13,7 @@ export default class DndSortingTable extends LightningElement {
     @api records
     @api displayField
     @api sortingField
+    @api availableActions = []
 
     cancelButtonLabel = CANCEL_LITERAL
     cancelButtonName = CANCEL_LITERAL
@@ -298,6 +300,7 @@ export default class DndSortingTable extends LightningElement {
                 return
             }
             this.showToast("", "success", "The order of records successfully saved", "dismissable")
+            this.sendEventToFlow()
         }
     }
 
@@ -309,5 +312,14 @@ export default class DndSortingTable extends LightningElement {
             mode: mode
         });
         this.dispatchEvent(event);
+    }
+
+    sendEventToFlow() {
+        if (this.availableActions.includes("NEXT")) {
+            this.dispatchEvent(new FlowNavigationNextEvent())
+        }
+        else if (this.availableActions.includes("FINISH")) {
+            this.dispatchEvent(new FlowNavigationFinishEvent())
+        }
     }
 }
